@@ -1,0 +1,33 @@
+%!TEX root = 2024-E25-Mathematik-2-HecC.tex
+\kaufgabe{10}
+
+\begin{tikzpicture}[
+]
+\begin{axis}[schule,
+	xlabel=x,
+	ylabel=y,
+	x=1cm,
+	y=1cm,
+	xtick distance=1,
+	ytick distance=1,
+	xmin=-4.5,
+	xmax=5.5,
+	ymin=-1.5,
+	ymax=7.5
+]
+	\addplot [domain=-5:5.5] {1.5*2^x};
+	\addplot [domain=-5:5.5] {2.0*0.75^x};
+	\addplot [domain=-5:5.5,dashed] {2^x+1};
+	\addplot [domain=-5:5.5] {2*0.5^x-1};
+
+	\node[below left] (0) at (0,-2pt) {\scriptsize $0$};
+	\node[above] at (-4,0.1){\scriptsize A};
+	\node[above] at (-4,1.1){\scriptsize B};
+	\node[below] at (5,-1){\scriptsize C};
+	\node[above] at (5,0.5){\scriptsize D};
+
+\end{axis}
+
+\end{tikzpicture}
+
+Geben Sie für die fünf Graphen A, B, C, D und E jeweils eine Funktionsgleichung an.
