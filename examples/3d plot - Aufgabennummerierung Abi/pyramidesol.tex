@@ -1,0 +1,70 @@
+\begin{tikzpicture}[
+]
+\begin{axis}[schule3,
+    xmin=-25, xmax=49,
+    ymin=-35, ymax=35,
+    zmin=0, zmax=34,
+    scale=0.1,
+    axis line style={line width=0.5pt, -{Stealth[scale=1.2]}},
+    extra x ticks={10,20,30,40},
+    %extra x tick labels={10,20,30,40},
+    extra y ticks={-30,-20,-10,10,20,30},
+    %extra y tick labels={-30,-20,-10,10,20,30},
+    %extra z ticks={-5,1,5},
+    %extra z tick labels={-5,1,5},
+    xtick distance=10, ytick distance=10, ztick distance=10,
+    font=\normalsize,
+    ]
+\begin{pgfonlayer}{axis background}
+    \begin{scope}[canvas is yz plane at x=0]
+		\draw[step=5,gray] (-35,-25) grid (35,35);
+    \end{scope}
+\end{pgfonlayer}
+
+
+	\coordinate (A) at (20,20,0);
+	\coordinate (A2) at (2,2,27);
+	\coordinate (B) at (-20,20,0);
+	\coordinate (B2) at (-2,2,27);
+	\coordinate (C) at (-20,-20,0);
+	\coordinate (D) at (20,-20,0);
+	\coordinate (D2) at (2,-2,27);
+	\coordinate (S) at (0,0,30);
+	\coordinate (M) at (40,0,15);
+	\coordinate (H) at (40,5,12.5);
+	\coordinate (M1) at (10,0,15);
+	\coordinate (F) at (40,5,0);
+	\coordinate (F1) at (20,5,0);
+	\coordinate (E) at (40,-5,0);
+	\coordinate (E1) at (20,-5,0);
+	\coordinate (I) at (40,-5,12.5);
+	\coordinate (I1) at (35/3,-5,12.5);
+	\coordinate (H1) at (35/3,5,12.5);
+
+	\draw[thick, fill=lightgray] (D2)--(A2)--(B2)--(S)--(D2);
+	
+	\draw[thick] (A)--(B);
+	\draw[thick,dashed] (B)--(C)--(D);
+	\draw[thick] (A)--(S);
+	\draw[thick] (B)--(S);
+	\draw[thick,dashed] (C)--(S);
+	\draw[thick] (D)--(S);
+
+	%Vorbau
+	\draw[thick] (E)--(F)--(H)--(M)--(I)--cycle;	
+	\draw[thick] (H)--(I);	
+	\draw[thick] (F)--(F1);
+	\draw[thick] (H)--(H1);
+	\draw[thick] (M)--(M1);
+	\draw[thick] (I)--(I1);
+	\draw[thick] (I1)--(M1)--(H1)--(F1);
+	\draw[thick,dashed] (E)--(E1)--(I1);
+	\draw[thick] (A)--(F1);
+	\draw[thick] (D)--(20,-15,0);
+	\draw[thick,dashed] (F1)--(20,-15,0);
+
+	%Beschriftung
+	\draw (M1) node[above]{$\mathbf{M'}$};
+
+\end{axis}
+\end{tikzpicture}
